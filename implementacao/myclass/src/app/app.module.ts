@@ -8,12 +8,16 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {FeedComponent} from "../components/feed/feed.component";
+import {FuncionalidadeIconeComponent} from "../components/func-icone/func-icone.component";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    FeedComponent,
+    FuncionalidadeIconeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    FeedComponent,
+    FuncionalidadeIconeComponent
   ],
   providers: [
     StatusBar,

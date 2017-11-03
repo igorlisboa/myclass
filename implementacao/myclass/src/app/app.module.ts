@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {FeedComponent} from "../components/feed/feed.component";
 import {FuncionalidadeIconeComponent} from "../components/func-icone/func-icone.component";
+import {PersistenciaService} from "../infra/persistencia/persistencia.service";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {FuncionalidadeIconeComponent} from "../components/func-icone/func-icone.
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,6 +35,7 @@ import {FuncionalidadeIconeComponent} from "../components/func-icone/func-icone.
   providers: [
     StatusBar,
     SplashScreen,
+    PersistenciaService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

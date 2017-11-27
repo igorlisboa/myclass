@@ -1,16 +1,61 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar class="mc_corpo" style="background-color: #222222">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title class="center"><img src="../../assets/imgs/ONCLASS.png" height="60"></ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h1>Projeto MyClass</h1>
+<ion-content class="mc_corpo">
+  <div class="mc_header_feed_stl">
+    <div class="mc_cabecalho_content_stl">
+    SEG 27/11 | Proj. Lógico de Comp<br>
+      <span>Vista de prova</span>
+    </div>
+    <div class="mc_slider_content_stl">
+      <ion-slides>
+        <ion-slide style="background-color: green">
+          <h2>Slide 1</h2>
+        </ion-slide>
 
-  <mc-feed></mc-feed>
+        <ion-slide style="background-color: blue">
+          <h2>Slide 2</h2>
+        </ion-slide>
 
-  <mc-funcionalidade-icone></mc-funcionalidade-icone>
+        <ion-slide style="background-color: red">
+          <h2>Slide 3</h2>
+        </ion-slide>
+
+      </ion-slides>
+    </div>
+  </div>
+
+
 </ion-content>
+
+<style>
+  .mc_header_feed_stl{
+    height: 30%;
+    background-color: #51a7e8;
+  }
+  .mc_slider_content_stl{
+    height: 100%;
+    width: 100%;
+  }
+  .mc_cabecalho_content_stl{
+    /*border: ;*/
+  }
+
+  .mc_corpo{
+    background-color: #222222 !important;
+  }
+  ion-navbar .toolbar-background-md{
+    background-color: #222222 !important;
+  }
+
+  .center{
+    margin: auto;
+    width: 50%;
+  }
+</style>

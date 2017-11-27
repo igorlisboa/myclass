@@ -4,7 +4,7 @@ import {GradeHoraria, PersistenciaService} from "../../infra/persistencia/persis
 @Component({
   selector:'mc-feed',
   templateUrl:'./feed.component.html',
-  styleUrls:['./feed.component.scss']
+  styles:['./feed.component.scss']
 })
 export class FeedComponent implements OnInit{
   public gradeHoraria:Array<GradeHoraria>;

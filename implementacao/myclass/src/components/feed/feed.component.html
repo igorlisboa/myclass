@@ -1,24 +1,52 @@
-<ion-grid class="feed">
-  <ion-row class="header-feed">
-    <ion-col col-4>03/11 - Sex</ion-col>
-    <ion-col col-8 text-center>CC Interdiciplinar</ion-col>
-  </ion-row>
-</ion-grid>
+<div class="oc_header_feed_stl">
+  <!--<pre>{{ // gradeHoraria | json}}</pre>-->
+  <div class="oc_slider_content_stl">
+    <ion-slides>
+      <ion-slide class="oc_slide_stl" *ngFor="let mensagem of mensagens;">
+        <div class="oc-texto-slider">
+          <h2>Dia {{mensagem.data | date:'dd/MM'}}</h2>
+          <h2>{{mensagem.materia}}</h2>
+          <h2>{{mensagem.descricao}}</h2>
+        </div>
+        <img src="{{mensagem.img}}" width="100" style="opacity: 0.5">
+      </ion-slide>
 
 
-<!--<ion-card>-->
+      <!--<ion-slide class="oc_slide_stl">-->
+        <!--<div class="oc-texto-slider">-->
+          <!--<h2>Dia 29/11</h2>-->
+          <!--<h2>Prova de Analise Matematica</h2>-->
+          <!--<h2>Entrega do trabalho de Analise Matematica</h2>-->
+        <!--</div>-->
+        <!--<img src="../../assets/imgs/estudando.jpg" width="100" style="opacity: 0.5">-->
+      <!--</ion-slide>-->
 
-  <!--<ion-card-header class="feed-header">-->
-   <!--<div class="row">-->
-     <!--<span class="">03/11 - Sex</span>-->
-     <!--<span class="f-r">CC Interdiciplinar</span>-->
-   <!--</div>-->
-  <!--</ion-card-header>-->
+      <!--<ion-slide class="oc_slide_stl">-->
+        <!--<div class="oc-texto-slider">-->
+          <!--<h2>Dia 29/11</h2>-->
+          <!--<h2>Apresentação do trabalho de Interdiciplinar</h2>-->
+        <!--</div>-->
+        <!--<img src="../../assets/imgs/estudando2.jpg" width="100" style="opacity: 0.5">-->
+      <!--</ion-slide>-->
 
-  <!--<ion-card-content>-->
-    <!--Usuário:-->
-    <!--<pre>SDFGHS{{gradeHoraria | json}}</pre>-->
-    <!--&lt;!&ndash; Add card content here! &ndash;&gt;-->
-  <!--</ion-card-content>-->
+      <!--<ion-slide style="" class="oc_slide_stl">-->
+        <!--<div class="oc-texto-slider">-->
+          <!--<h2>ATENÇÃO !!!</h2>-->
+          <!--<h2>Não esqueçam de marcar as provas de DP.</h2>-->
+        <!--</div>-->
+        <!--<img src="../../assets/imgs/estudando.jpg" width="100" style="opacity: 0.5">-->
+      <!--</ion-slide>-->
 
-<!--</ion-card>-->
+    </ion-slides>
+  </div>
+  <div style="margin: auto 2rem">
+    <div class="oc_cabecalho_content_stl">
+      <div class="oc_cabecalho_datas">
+        {{diaDescricao}} &nbsp; {{hoje | date:'dd/MM'}} &nbsp;|&nbsp; {{aulaHoje.nomeAula}}
+      </div>
+      <div class="oc_cabecalho_destaque">
+        {{aulaHoje.alerta[0].texto}} {{aulaHoje.alerta.length <= 0 ?'Vista de prova':''}}
+      </div>
+    </div>
+  </div>
+</div>

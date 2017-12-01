@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
+import {CalendarioPage} from "../calendario/calendario";
 
 @Component({
   selector: 'page-home',
@@ -18,4 +19,9 @@ export class HomePage {
   clicou(){
     this.teste2 = this.teste;
   }
+
+  openCalendario(){
+    this.navCtrl.push(CalendarioPage);
+  }
+
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import {IonicApp, IonicErrorHandler, IonicModule, IonicPageModule} from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -11,6 +11,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {FeedComponent} from "../components/feed/feed.component";
 import {FuncionalidadeIconeComponent} from "../components/func-icone/func-icone.component";
 import {PersistenciaService} from "../infra/persistencia/persistencia.service";
+import {LoginPage} from "../pages/login/login";
+import {CalendarioPage} from "../pages/calendario/calendario";
 
 @NgModule({
   declarations: [
@@ -18,11 +20,16 @@ import {PersistenciaService} from "../infra/persistencia/persistencia.service";
     HomePage,
     ListPage,
     FeedComponent,
-    FuncionalidadeIconeComponent
+    FuncionalidadeIconeComponent,
+    LoginPage,
+    CalendarioPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicPageModule.forChild(HomePage),
+    IonicPageModule.forChild(CalendarioPage)
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,7 +37,9 @@ import {PersistenciaService} from "../infra/persistencia/persistencia.service";
     HomePage,
     ListPage,
     FeedComponent,
-    FuncionalidadeIconeComponent
+    FuncionalidadeIconeComponent,
+    LoginPage,
+    CalendarioPage
   ],
   providers: [
     StatusBar,

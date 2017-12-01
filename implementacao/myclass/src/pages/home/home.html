@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar class="mc_corpo" style="background-color: #222222">
+  <ion-navbar class="oc_corpo" style="background-color: #222222">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,55 +7,157 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="mc_corpo">
-  <div class="mc_header_feed_stl">
-    <div class="mc_cabecalho_content_stl">
-    SEG 27/11 | Proj. Lógico de Comp<br>
-      <span>Vista de prova</span>
+<ion-content class="oc_corpo">
+  <div class="oc_header_feed_stl">
+    <div style="margin: auto 2rem">
+      <div class="oc_cabecalho_content_stl">
+        <div class="oc_cabecalho_datas">
+          SEG 27/11 &nbsp; Proj. Lógico de Comp
+        </div>
+        <div class="oc_cabecalho_destaque">
+          Vista de prova
+        </div>
+      </div>
     </div>
-    <div class="mc_slider_content_stl">
-      <ion-slides>
-        <ion-slide style="background-color: green">
-          <h2>Slide 1</h2>
-        </ion-slide>
+      <div class="oc_slider_content_stl">
+        <ion-slides>
+          <ion-slide class="oc_slide_stl">
+            <div class="oc-texto-slider">
+              <h2>Dia 29/11</h2>
+              <h2>Prova de Analise Matematica</h2>
+              <h2>Entrega do trabalho de Analise Matematica</h2>
+            </div>
+            <img src="../../assets/imgs/estudando.jpg" width="100" style="opacity: 0.5">
+          </ion-slide>
 
-        <ion-slide style="background-color: blue">
-          <h2>Slide 2</h2>
-        </ion-slide>
+          <ion-slide class="oc_slide_stl">
+            <div class="oc-texto-slider">
+              <h2>Dia 29/11</h2>
+              <h2>Apresentação do trabalho de Interdiciplinar</h2>
+            </div>
+            <img src="../../assets/imgs/estudando2.jpg" width="100" style="opacity: 0.5">
+          </ion-slide>
 
-        <ion-slide style="background-color: red">
-          <h2>Slide 3</h2>
-        </ion-slide>
+          <ion-slide style="" class="oc_slide_stl">
+            <div class="oc-texto-slider">
+              <h2>ATENÇÃO !!!</h2>
+              <h2>Não esqueçam de marcar as provas de DP.</h2>
+            </div>
+            <img src="../../assets/imgs/estudando.jpg" width="100" style="opacity: 0.5">
+          </ion-slide>
 
-      </ion-slides>
+        </ion-slides>
     </div>
   </div>
 
+  <div class="oc_area_icones">
+    <ion-grid>
+      <ion-row>
+        <ion-col  class="center" (click)="openCalendario()">
+          <ion-icon ios="ios-calendar" md="md-calendar" class="oc-icon-stl"></ion-icon>
+          <!--<img src="../../assets/imgs/logo_1.png" width="100">-->
+        </ion-col>
+        <ion-col  class="center">
+          <ion-icon ios="ios-list" md="md-list" class="oc-icon-stl"></ion-icon>
+          <!--<img src="../../assets/imgs/logo_2.png" width="100">-->
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col  class="center">
+          <ion-icon ios="ios-people" md="md-people" class="oc-icon-stl"></ion-icon>
+          <!--<img src="../../assets/imgs/logo_3.png" width="100">-->
+        </ion-col>
+        <ion-col  class="center">
+          <ion-icon ios="ios-attach" md="md-attach" class="oc-icon-stl"></ion-icon>
+          <!--<img src="../../assets/imgs/logo_4.png" width="100">-->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>
-
 <style>
-  .mc_header_feed_stl{
-    height: 30%;
-    background-color: #51a7e8;
+  @font-face {
+    font-family: 'Permanent Marker';
+    src: url('../../assets/fonts/PermanentMarker-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
   }
-  .mc_slider_content_stl{
-    height: 100%;
-    width: 100%;
-  }
-  .mc_cabecalho_content_stl{
-    /*border: ;*/
+  @font-face {
+    font-family: 'Pacifico';
+    src: url('../../assets/fonts/Pacifico-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
   }
 
-  .mc_corpo{
+  .oc_area_icones{
+    padding: 2.5rem;
+  }
+
+  .oc_header_feed_stl{
+    height: 50%;
+    background-color: #222222;
+    border-top: solid 1rem #222222;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+
+
+  }
+  .oc_slider_content_stl{
+    height: 75%;
+    width: 100%;
+    position: relative;
+  }
+
+  .oc-texto-slider{
+    position: absolute;
+    color: #fff;
+    z-index: 100;
+    text-shadow: 1px 1px 1px #111111;
+  }
+  .oc_slide_stl{
+    font-family: 'arial', sans-serif;
+    font-size: 14pt;
+    color: #111;
+    background-color: #222222;
+  }
+
+  .oc_cabecalho_content_stl{
+    /*border-bottom: 1px solid #000000;*/
+    height: 25%;
+    text-align: center;
+  }
+
+  .oc_cabecalho_datas{
+    height: 50%;
+    padding: 0.5rem;
+    font-family: 'arial', sans-serif;
+    font-size: 14pt;
+    color: #e0e395;
+  }
+
+  .oc_cabecalho_destaque{
+    height: 50%;
+    padding: 0.5rem;
+    font-family: 'arial', sans-serif;
+    font-size: 13pt;
+    color: #e39988;
+  }
+
+  .oc_corpo{
     background-color: #222222 !important;
   }
-  ion-navbar .toolbar-background-md{
-    background-color: #222222 !important;
+
+  .oc-icon-stl{
+    font-size:90px;
+    width:100px;
+    height:100px;
+    color: #f71010;
+    text-shadow: 1px 1px 1px #970f0f;
   }
 
   .center{
     margin: auto;
     width: 50%;
+    text-align: center;
   }
 </style>

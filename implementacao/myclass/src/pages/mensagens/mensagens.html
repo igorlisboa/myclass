@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mensagens</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="getting-started" class="oc_corpo">
+  <oc-card-mensagem></oc-card-mensagem>
+  <oc-card-mensagem></oc-card-mensagem>
+  <oc-card-mensagem></oc-card-mensagem>
+  <oc-card-mensagem></oc-card-mensagem>
+
+  <ion-fab bottom right>
+    <button ion-fab color="danger" (click)="abrirNovaMensagem()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

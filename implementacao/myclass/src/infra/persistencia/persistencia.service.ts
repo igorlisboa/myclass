@@ -11,45 +11,73 @@ export class PersistenciaService{
       {
         diaSemana : DiaSemanaEnum.SEGUNDA,
         horario : 1,
-        nomeAula : "Proj. Lógico de Computadores",
+        nomeAula : "Proj. Lóg. de Compu.",
         prof : "Ricardo Loiola",
-        alerta :[]
+        alerta :[{
+          data:new Date().setFullYear(2017,11,4),
+          nivelAlerta: 1,
+          texto:"Apresentação dos trabalhos."
+        }]
       },{
         diaSemana : DiaSemanaEnum.SEGUNDA,
         horario : 2,
         nomeAula : "Processamento de Imagem",
         prof : "Gerson",
-        alerta :[]
+        alerta :[{
+          data:new Date().setFullYear(2017,11,4),
+          nivelAlerta: 1,
+          texto:"Apresentação dos trabalhos."
+        }]
       },{
         diaSemana : DiaSemanaEnum.TERCA,
         horario : 1,
         nomeAula : "Sistemas de Operacionais Abertos",
         prof : "A Definir",
-        alerta :[]
+        alerta :[{
+          data:new Date().setFullYear(2017,11,4),
+          nivelAlerta: 1,
+          texto:"Apresentação dos trabalhos."
+        }]
       },{
         diaSemana : DiaSemanaEnum.QUARTA,
         horario : 1,
         nomeAula : "Analise Matemática",
         prof : "Solange",
-        alerta :[]
+        alerta :[{
+          data:new Date().setFullYear(2017,11,4),
+          nivelAlerta: 1,
+          texto:"Apresentação dos trabalhos."
+        }]
       },{
         diaSemana : DiaSemanaEnum.QUARTA,
         horario : 2,
         nomeAula : "Telecomunicações",
         prof : "Carlos Geber",
-        alerta :[]
+        alerta :[{
+          data:new Date().setFullYear(2017,11,4),
+          nivelAlerta: 1,
+          texto:"Apresentação dos trabalhos."
+        }]
       },{
         diaSemana : DiaSemanaEnum.QUINTA,
         horario : 1,
         nomeAula : "Sistema de Informações Inteligentes",
         prof : "Robson",
-        alerta :[]
+        alerta :[{
+          data:new Date().setFullYear(2017,11,4),
+          nivelAlerta: 1,
+          texto:"Apresentação dos trabalhos."
+        }]
       },{
         diaSemana : DiaSemanaEnum.QUINTA,
         horario : 2,
         nomeAula : "Administração",
         prof : "Fernando Bonfim",
-        alerta :[],
+        alerta :[{
+          data:new Date().setFullYear(2017,11,4),
+          nivelAlerta: 1,
+          texto:"Apresentação dos trabalhos."
+        }],
         quinzenal:true
       },{
         diaSemana : DiaSemanaEnum.SEXTA,
@@ -58,6 +86,16 @@ export class PersistenciaService{
         prof : "Gerson",
         alerta :[{
           data:new Date().setFullYear(2017,11,1),
+          nivelAlerta: 1,
+          texto:"Apresentação dos trabalhos."
+        }]
+      },{
+        diaSemana : DiaSemanaEnum.SEGUNDA,
+        horario : 1,
+        nomeAula : "CC Interdiciplinar",
+        prof : "Gerson",
+        alerta :[{
+          data:new Date().setFullYear(2017,11,4),
           nivelAlerta: 1,
           texto:"Apresentação dos trabalhos."
         }]

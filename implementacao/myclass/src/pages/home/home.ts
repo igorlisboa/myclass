@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {CalendarioPage} from "../calendario/calendario";
+import {MensagensPage} from "../mensagens/mensagens";
 
 @Component({
   selector: 'page-home',
@@ -22,6 +23,10 @@ export class HomePage {
 
   openCalendario(){
     this.navCtrl.push(CalendarioPage);
+  }
+
+  openListaMensagens(){
+    this.navCtrl.push(MensagensPage);
   }
 
 }

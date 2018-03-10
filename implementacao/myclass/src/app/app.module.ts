@@ -13,6 +13,9 @@ import {FuncionalidadeIconeComponent} from "../components/func-icone/func-icone.
 import {PersistenciaService} from "../infra/persistencia/persistencia.service";
 import {LoginPage} from "../pages/login/login";
 import {CalendarioPage} from "../pages/calendario/calendario";
+import {MensagensPage} from "../pages/mensagens/mensagens";
+import {CardMensagemComponent} from "../components/mensagem-card/mensagem-card.component";
+import {ModalDetalheComponent} from "../components/mensagem-card/modal-detalhe/modal-detalhe.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import {CalendarioPage} from "../pages/calendario/calendario";
     FeedComponent,
     FuncionalidadeIconeComponent,
     LoginPage,
-    CalendarioPage
+    CalendarioPage,
+    MensagensPage,
+    CardMensagemComponent,
+    ModalDetalheComponent
   ],
   imports: [
     BrowserModule,
@@ -39,12 +45,16 @@ import {CalendarioPage} from "../pages/calendario/calendario";
     FeedComponent,
     FuncionalidadeIconeComponent,
     LoginPage,
-    CalendarioPage
+    CalendarioPage,
+    MensagensPage,
+    CardMensagemComponent,
+    ModalDetalheComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
     PersistenciaService,
+    ModalDetalheComponent,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
